@@ -813,43 +813,7 @@ h6 {
   transition: all 0.4s ease-in-out;
 }
 
-.footer-basic {
-  padding:40px;
-  
-  color:#4b4c4d;
-}
 
-
-.footer-basic .social {
-  text-align:center;
-  
-}
-
-.footer-basic .social > a {
-  font-size:24px;
-  width:40px;
-  height:40px;
-  line-height:40px;
-  display:inline-block;
-  text-align:center;
-  border-radius:50%;
-  border:1px solid #ccc;
-  margin:0 8px;
-  color:inherit;
-  opacity:0.75;
-}
-
-.footer-basic .social > a:hover {
-  opacity:0.9;
-}
-
-.footer-basic .copyright {
-  margin-top:15px;
-  text-align:center;
-  font-size:13px;
-  color:#aaa;
-  margin-bottom:0;
-}
 
 h5 {
 	font-size: 30px;
@@ -1146,5 +1110,57 @@ h5 {
   /* Keep your existing styles for larger screens here */
 }
 
+.footer-basic {
+  padding: 20px; /* Adjusted padding for mobile */
+  color: #4b4c4d;
+}
 
+.footer-basic .social {
+  text-align: center;
+}
+
+.footer-basic .social > a {
+  font-size: 20px; /* Adjusted font size for mobile */
+  width: 30px; /* Adjusted width for mobile */
+  height: 30px; /* Adjusted height for mobile */
+  line-height: 30px; /* Adjusted line height for mobile */
+  margin: 0 5px; /* Adjusted margin for mobile */
+}
+
+.footer-basic .social > a:hover {
+  opacity: 0.9;
+}
+
+.footer-basic .copyright {
+  margin-top: 10px; /* Adjusted margin for mobile */
+  text-align: center;
+  font-size: 12px; /* Adjusted font size for mobile */
+  color: #aaa;
+  margin-bottom: 0;
+}
+
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  .footer-basic {
+    padding: 15px; /* Further adjusted padding for smaller screens */
+  }
+
+  .footer-basic .social > a {
+    font-size: 18px; /* Further adjusted font size for mobile */
+    width: 25px; /* Further adjusted width for mobile */
+    height: 25px; /* Further adjusted height for mobile */
+    line-height: 25px; /* Further adjusted line height for mobile */
+    margin: 0 3px; /* Further adjusted margin for mobile */
+  }
+
+  .footer-basic .copyright {
+    margin-top: 5px; /* Further adjusted margin for mobile */
+    font-size: 11px; /* Further adjusted font size for mobile */
+  }
+}
+
+/* Media query for larger screens (desktop, tablet, etc.) */
+@media only screen and (min-width: 769px) {
+  /* Keep your existing styles for larger screens here */
+}
 
