@@ -796,32 +796,6 @@ h6 {
 
 
 
-.post-item2 {
-	margin-left: auto;
-  margin-right: auto;
-	text-align: center;
-  border: 0px solid #ece357;
-  width: 900px;
-  height: 200px;
-  box-shadow: 1px 10px 40px 1px #f5e00f;
-  border-radius: 30px 30px;
-  padding: 60px 70px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-
-
-.post-item2:hover {
-
-  outline: 0px solid transparent;
-  
-  border: 0px solid #fd6000;
-  border-radius: 30px 30px;
-  box-shadow: 1px 10px 40px 1px #fd6000;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
 
 .post-item {
   
@@ -1095,7 +1069,7 @@ h5 {
 }
 
 .contact-form {
-    max-width: 500px;
+    max-width: 100%; /* Adjusted for responsiveness */
     margin: 0 auto;
     padding: 20px;
     background-color: #67335e;
@@ -1141,6 +1115,35 @@ h5 {
 
 .contact-form button[type="submit"]:hover {
     background-color: #2980b9;
+}
+
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  .contact-form {
+    padding: 10px; /* Adjust padding for smaller screens */
+    border-radius: 10px; /* Smaller border radius for mobile */
+  }
+
+  .contact-form h2 {
+    margin-bottom: 10px; /* Adjusted margin for smaller screens */
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    margin-bottom: 10px; /* Adjusted margin for smaller screens */
+    border-radius: 10px; /* Smaller border radius for inputs on mobile */
+  }
+
+  .contact-form button[type="submit"] {
+    padding: 8px 12px; /* Adjusted padding for smaller screens */
+    border-radius: 10px; /* Smaller border radius for button on mobile */
+  }
+}
+
+/* Media query for larger screens (desktop, tablet, etc.) */
+@media only screen and (min-width: 769px) {
+  /* Keep your existing styles for larger screens here */
 }
 
 
