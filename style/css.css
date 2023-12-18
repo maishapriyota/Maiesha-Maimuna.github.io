@@ -11,8 +11,19 @@ body, h1, h2, h3, p {
     font-family: Lato, Helvetica, Arial, sans-serif;
 }
 
-/* Global styles */
 
+
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  body {
+    /* Adjustments for mobile screens */
+    /* For example: */
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Global styles */
 * {
   border: 0;
   box-sizing: border-box;
@@ -20,6 +31,15 @@ body, h1, h2, h3, p {
   padding: 0;
 }
 
+/* Media query for larger screens (desktop, tablet, etc.) */
+@media only screen and (min-width: 769px) {
+  body {
+    /* Adjustments for larger screens */
+    /* For example: */
+    padding: 20px;
+    font-size: 16px;
+  }
+}
 
 a {
   color: inherit;
@@ -189,9 +209,30 @@ a {
   backface-visibility: hidden;
 }
 
-@media (min-width: 500px) {
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  .sphere-animation {
+    width: 80%; /* Adjust as needed for mobile */
+    height: auto; /* Allow the height to adjust proportionally */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+}
+
+/* Media query for larger screens (desktop, tablet, etc.) */
+@media only screen and (min-width: 769px) {
+  .sphere-animation {
+    width: 700px; /* Desktop width */
+    height: 800px; /* Desktop height */
+    left: 150%;
+    margin: -300px 0 0 -60px;
+  }
+
+  /* Optional: Adjust other properties for larger screens */
   .sphere path {
-    stroke-width: 1px;
+    stroke-width: 1px; /* Your existing styles */
   }
 }
 
@@ -208,6 +249,7 @@ a {
     @media(max-width: 1200px) {
         margin-top: -4%;
     }
+	
     @media(max-width: 600px) {
         flex-direction: column;
     }
@@ -413,6 +455,7 @@ h1 span {
       0 0 151px #0fa;
 }
 
+/* Styles for intro */
 .intro{
 	position: absolute;
   top: 55%;
@@ -427,6 +470,8 @@ h1 span {
   margin-top: -60px;
   padding-left: 10px;
 }
+
+/* Styles for intro1 */
 .intro1{
   position: absolute;
   top: 63%;
@@ -456,6 +501,7 @@ h1 span {
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
+/* Styles for button */
 #container {
   width: 100%;
   padding: 10px 150px;
@@ -509,79 +555,117 @@ button:hover::before {
   }
 }
 
-/* new */
-.gallery {
-	display: flex;
-	padding: 600px 90px;
-	transition: .3s;
-	
-	
-	&__column {
-		display: flex;
-		flex-direction: column;
-		width: 40%;
-	}
-	
-	&__link {
-		margin: 2px;
-		overflow: hidden;
-		
-		&:hover {
-			.gallery__image {
-				filter: grayscale(0);
-			}
-			
-			.gallery__caption {
-				opacity: 1;
-			}
-		}
-	}
-	
-	&__thumb {
-		position: relative;
-	}
-	
-	&__image {
-		display: block;
-		width: 100%;
-		transition: .3s;
-		
-		&:hover {
-			transform: scale(1.1);
-		}
-	}
-	
-	&__caption {
 
-		bottom: 0;
-		left: 0;
-		
-		width: 100%;
-		font-family: 'Raleway', sans-serif;
-		font-size: 16px;
-		color: white;
-		opacity: 0;
-		background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255 ,255 , 0) 100%);
-		transition: .3s;
-	}
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+    letter-spacing: 5px;
+    top: 20%;
+    left: 5%;
+  }
+
+  .intro,
+  .intro1 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    top: 30%;
+    left: 5%;
+    width: 80%;
+  }
+
+  button {
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
 }
 
-.item:hover img{
-    -webkit-transform: scale(1.1);
+/* Media query for larger screens (desktop, tablet, etc.) */
+@media only screen and (min-width: 769px) {
+  /* Keep your existing styles for larger screens here */
+}
+
+/* images */
+.gallery {
+  display: flex;
+  padding: 600px 90px;
+  transition: .3s;
+}
+
+.gallery__column {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.gallery__link {
+  margin: 2px;
+  overflow: hidden;
+}
+
+.gallery__thumb {
+  position: relative;
+}
+
+.gallery__image {
+  display: block;
+  width: 100%;
+  height: auto%; /* Initial height */
+  transition: .3s;
+
+  &:hover {
     transform: scale(1.1);
-	
-    -webkit-transition: all 0.8s;
-    transition: all 0.8s;
-    opacity:2;
-	border-radius: 20px;
-	
+  }
+}
+
+.caption {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  color: white;
+  opacity: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
+  transition: .3s;
+}
+
+/* Hover effect styles */
+.item:hover img {
+  transform: scale(1.1);
+  transition: all 0.8s;
+  opacity: 1;
+  border-radius: 20px;
 }
 
 .item .caption {
+  opacity: 0;
+  transition: all 0.4s;
+}
 
-	opacity: 0;
-	-webkit-transition: all 0.4s;
-    transition: all 0.4s;
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  .gallery {
+    padding: 200px 20px; /* Adjust padding for mobile */
+    flex-direction: column; /* Display images in a column for mobile */
+  }
+
+  .gallery__column {
+    width: 100%; /* Full width for mobile */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .gallery__image {
+    height: 100%; /* Take full height of the container */
+    margin-bottom: 10px; /* Add some space between images */
+  }
+}
+
+/* Media query for larger screens (desktop, tablet, etc.) */
+@media only screen and (min-width: 769px) {
+  /* Keep your existing styles for larger screens here */
 }
 
 .column {
@@ -685,6 +769,8 @@ h6 {
   transition: all 0.5s ease-in-out;
 }
 
+
+
 .post-item2 {
 	margin-left: auto;
   margin-right: auto;
@@ -698,6 +784,9 @@ h6 {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
+
+
+
 .post-item2:hover {
 
   outline: 0px solid transparent;
@@ -885,18 +974,92 @@ h5 {
 
 
 
-/* Styles for screens 768px and above */
 @media (min-width: 768px) {
-    .layout {
-		width: 70%
+    .timeline:before {
+        left: 50%;
     }
 
-    
+    .timeline>li {
+        margin-bottom: 20px; /* Adjusted margin for smaller screens */
+        min-height: 100px;
+    }
+
+    .timeline>li .timeline-panel {
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 30px;
+        text-align: right;
+    }
+
+    .timeline>li .timeline-image {
+        left: 50%;
+        width: 70px; /* Adjusted image size for smaller screens */
+        height: 70px; /* Adjusted image size for smaller screens */
+        margin-left: -35px; /* Half of the adjusted width for centering */
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 16px;
+        font-size: 7px;
+        line-height: 18px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+    }
 }
 
+/* For screens 992px and above */
+@media (min-width: 992px) {
+    .timeline>li {
+        min-height: 150px;
+    }
+
+    .timeline>li .timeline-panel {
+        padding: 0 20px 20px;
+    }
+
+    .timeline>li .timeline-image {
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 20px 20px;
+    }
+}
+
+/* For screens 1200px and above */
 @media (min-width: 1200px) {
-    .layout {
-		width: 100%
+    .timeline>li {
+        min-height: 170px;
+    }
+
+    .timeline>li .timeline-panel {
+        padding: 0 20px 20px 100px;
+    }
+
+    .timeline>li .timeline-image {
+        width: 120px;
+        height: 120px;
+        margin-left: -60px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 40px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 100px 20px 20px;
     }
 }
 
