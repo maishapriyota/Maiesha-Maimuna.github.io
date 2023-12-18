@@ -767,11 +767,6 @@ h5 {
 	font-size: 30px;
 }
 
-@media(min-width:768px) {
-    #portfolio .portfolio-item {
-        margin: 0 0 30px;
-    }
-}
 
 .timeline {
     position: relative;
@@ -888,36 +883,34 @@ h5 {
     margin-bottom: 0;
 }
 
-/* Media Queries */
+
 
 /* Styles for screens 768px and above */
 @media (min-width: 768px) {
-    
-
-    .timeline:before {
+    .layout:before {
         left: 50%;
     }
 
-    .timeline>li {
+    .layout>li {
         margin-bottom: 20px;
         min-height: 100px;
     }
 
-    .timeline>li .timeline-panel {
+    .layout>li .timeline-panel {
         float: left;
         width: 41%;
         padding: 0 20px 20px 30px;
         text-align: right;
     }
 
-    .timeline>li .timeline-image {
+    .layout>li .timeline-image {
         left: 50%;
-        width: 70px; /* Adjusted image size for smaller screens */
-        height: 70px; /* Adjusted image size for smaller screens */
-        margin-left: -35px; /* Half of the adjusted width for centering */
+        width: 70px;
+        height: 70px;
+        margin-left: -35px;
     }
 
-    .timeline>li .timeline-image h4 {
+    .layout>li .timeline-image h4 {
         margin-top: 16px;
         font-size: 7px;
         line-height: 18px;
@@ -931,8 +924,6 @@ h5 {
 }
 
 @media (min-width: 992px) {
-    /* Styles for screens 992px and above */
-
     .timeline>li {
         min-height: 150px;
     }
@@ -959,8 +950,6 @@ h5 {
 }
 
 @media (min-width: 1200px) {
-    /* Styles for screens 1200px and above */
-
     .timeline>li {
         min-height: 170px;
     }
@@ -983,7 +972,6 @@ h5 {
         padding: 0 100px 20px 20px;
     }
 }
-
 
 
 .activities {
