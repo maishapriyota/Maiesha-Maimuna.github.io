@@ -176,7 +176,6 @@ a {
   position: relative;
 }
 
-
 .animation-wrapper::before {
   content: '';
   display: block;
@@ -187,8 +186,6 @@ a {
   width: 85%;
   height: 85%;
   z-index: 0;
-  
-
 }
 
 .sphere-animation {
@@ -200,12 +197,10 @@ a {
   margin: -300px 0 0 -60px;
 }
 
-
-
 .sphere path {
   fill: #54203e;
   stroke-width: 1px;
-  stroke: rgba(80,80,80,.35);
+  stroke: rgba(80, 80, 80, .35);
   backface-visibility: hidden;
 }
 
@@ -235,7 +230,6 @@ a {
     stroke-width: 1px; /* Your existing styles */
   }
 }
-
 
 
 .controls {
