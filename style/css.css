@@ -723,7 +723,7 @@ button:hover::before {
 h4 {
 	font-family: "lato", sans-serif;
   font-weight: 100;
-  font-size: 50px;
+  font-size: 30px;
   color: #d2e0e1;
   text-align: center;
 }
@@ -732,10 +732,35 @@ h4 {
 
 h5 { font-family: "lato", sans-serif;
   font-weight: 100;
-  font-size: 45px;
+  font-size: 25px;
   color: #d2e0e1;
-  padding: 10px 90px 10px;
+  padding: 10px 20px;
 }
+	
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  .column {
+    width: 100%; /* Occupy full width on mobile */
+    padding: 10px; /* Adjust padding for smaller screens */
+    height: auto; /* Remove height property */
+  }
+
+  h4 {
+    font-size: 25px; /* Adjusted font size for mobile */
+  }
+
+  h5 {
+    font-size: 20px; /* Adjusted font size for mobile */
+    padding: 10px; /* Adjusted padding for smaller screens */
+  }
+
+  /* Adjust other styles as needed for mobile */
+}
+
+/* Media query for larger screens (desktop, tablet, etc.) */
+@media only screen and (min-width: 769px) {
+  /* Keep your existing styles for larger screens here */
+}	
 	
 h6 {
   font-family: "lato", sans-serif;
