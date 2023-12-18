@@ -1,3 +1,4 @@
+/* Reset and Global Styles */
 html {
   
   background: linear-gradient(to right, #54203e , #752a55);
@@ -766,7 +767,7 @@ h5 {
 	font-size: 30px;
 }
 
-@media(min-width:767px) {
+@media(min-width:768px) {
     #portfolio .portfolio-item {
         margin: 0 0 30px;
     }
@@ -889,16 +890,16 @@ h5 {
 
 /* Media Queries */
 
-
+/* Styles for screens 768px and above */
 @media (min-width: 768px) {
-    /* Styles for screens 768px and above */
+    
 
     .timeline:before {
         left: 50%;
     }
 
     .timeline>li {
-        margin-bottom: 100px;
+        margin-bottom: 20px;
         min-height: 100px;
     }
 
@@ -911,9 +912,9 @@ h5 {
 
     .timeline>li .timeline-image {
         left: 50%;
-        width: 100px;
-        height: 100px;
-        margin-left: -50px;
+        width: 70px; /* Adjusted image size for smaller screens */
+        height: 70px; /* Adjusted image size for smaller screens */
+        margin-left: -35px; /* Half of the adjusted width for centering */
     }
 
     .timeline>li .timeline-image h4 {
@@ -941,9 +942,9 @@ h5 {
     }
 
     .timeline>li .timeline-image {
-        width: 150px;
-        height: 150px;
-        margin-left: -75px;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
     }
 
     .timeline>li .timeline-image h4 {
@@ -969,9 +970,9 @@ h5 {
     }
 
     .timeline>li .timeline-image {
-        width: 170px;
-        height: 170px;
-        margin-left: -85px;
+        width: 120px;
+        height: 120px;
+        margin-left: -60px;
     }
 
     .timeline>li .timeline-image h4 {
@@ -1038,10 +1039,6 @@ h5 {
 .contact-form button[type="submit"]:hover {
     background-color: #2980b9;
 }
-
-
-
-
 
 
 
