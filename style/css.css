@@ -606,7 +606,7 @@ button:hover::before {
 .gallery__image {
   display: block;
   width: 100%;
-  height: auto%; /* Initial height */
+  height: auto; /* Initial height */
   transition: .3s;
 
   &:hover {
